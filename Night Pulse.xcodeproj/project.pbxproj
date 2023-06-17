@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A231684A2A3DBD4D0016D400 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23168492A3DBD4D0016D400 /* ExtensionDelegate.swift */; };
-		A231684C2A3DBEE20016D400 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A231684B2A3DBEE20016D400 /* InterfaceController.swift */; };
 		A23168502A3DC0560016D400 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A231684F2A3DC0560016D400 /* ContentView.swift */; };
 		A2F24B372A347A4400AC7F8A /* Night Pulse Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A2F24B362A347A4400AC7F8A /* Night Pulse Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A2F24B3C2A347A4400AC7F8A /* Night_PulseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F24B3B2A347A4400AC7F8A /* Night_PulseApp.swift */; };
@@ -42,8 +40,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A23168492A3DBD4D0016D400 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		A231684B2A3DBEE20016D400 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		A231684F2A3DC0560016D400 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A2F24B302A347A4400AC7F8A /* Night Pulse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Night Pulse.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2F24B362A347A4400AC7F8A /* Night Pulse Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Night Pulse Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,8 +88,6 @@
 				A2F24B502A347E9D00AC7F8A /* Night-Pulse-Watch-App-Info.plist */,
 				A2F24B3B2A347A4400AC7F8A /* Night_PulseApp.swift */,
 				A231684F2A3DC0560016D400 /* ContentView.swift */,
-				A231684B2A3DBEE20016D400 /* InterfaceController.swift */,
-				A23168492A3DBD4D0016D400 /* ExtensionDelegate.swift */,
 				A2F24B3F2A347A4500AC7F8A /* Assets.xcassets */,
 				A2F24B412A347A4500AC7F8A /* Preview Content */,
 			);
@@ -214,10 +208,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A231684C2A3DBEE20016D400 /* InterfaceController.swift in Sources */,
 				A23168502A3DC0560016D400 /* ContentView.swift in Sources */,
 				A2F24B3C2A347A4400AC7F8A /* Night_PulseApp.swift in Sources */,
-				A231684A2A3DBD4D0016D400 /* ExtensionDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +342,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Night Pulse Watch App/Night Pulse Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -360,6 +353,7 @@
 				INFOPLIST_FILE = "Night-Pulse-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Night Pulse";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "We access this data to check your heart rate.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "We access this data to check your heart rate.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -374,7 +368,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -383,6 +377,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Night Pulse Watch App/Night Pulse Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -393,6 +388,7 @@
 				INFOPLIST_FILE = "Night-Pulse-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Night Pulse";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "We access this data to check your heart rate.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "We access this data to check your heart rate.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -408,7 +404,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};

@@ -8,8 +8,8 @@
 import SwiftUI
 
 @main
-struct NightPulseApp: App {
-    @SceneBuilder var body: some Scene {
+struct Night_PulseApp: App {
+    var body: some Scene {
         WindowGroup {
             ContentView()
         }
