@@ -29,3 +29,5 @@ Add the necessary HealthKit capabilities and permissions and write this code for
 
 # Creator
 This app was created by Mylo Kaye, an aspiring developer and desgigner. Learn more at https://www.mylokaye.tech
+
+Basic website for the app: https://night-pulse.com
