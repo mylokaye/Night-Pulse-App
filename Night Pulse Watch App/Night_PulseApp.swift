@@ -2,14 +2,14 @@
 //  Night_PulseApp.swift
 //  Night Pulse Watch App
 //
-//  Created by Mylo Kaye on 10/06/2023.
+//  Created by Mylo Kaye mylokaye.tech on 10/06/2023.
 //
 
 import SwiftUI
 
 @main
-struct Night_Pulse_Watch_AppApp: App {
-    var body: some Scene {
+struct NightPulseApp: App {
+    @SceneBuilder var body: some Scene {
         WindowGroup {
             ContentView()
         }

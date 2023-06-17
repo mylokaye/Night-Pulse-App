@@ -1,77 +1,53 @@
 //
-//  ContentView.swift
-//  Heart Rate2 Watch App
+//  Night_PulseApp.swift
+//  Night Pulse Watch App
 //
-//  Created by Mylo Kaye on 03/05/2023.
+//  Created by Mylo Kaye mylokaye.tech on 10/06/2023.
 //
 
 import SwiftUI
-import HealthKit
 
 struct ContentView: View {
-    @State private var heartRate: Double = 0
-    private let healthStore = HKHealthStore()
+    @State private var heartRateLimit: Int = 100
+    @State private var monitoringEnabled: Bool = false
 
     var body: some View {
         VStack {
-            Text("Heart Rate")
-                .font(.title)
+            ScrollView {
+                // Your scrollable content here
+            }
+            .onAppear {
+                // Read the contentOffset binding here
+                let _ = scrollViewOffset
+            }
 
-            Text("\(Int(heartRate)) BPM")
-                .font(.body)
-                .fontWeight(.regular)
-                .lineLimit(0)
-                .padding()
+            Picker("Heart Rate Limit", selection: $heartRateLimit) {
+                ForEach(50...200, id: \.self) { bpm in
+                    Text("\(bpm) BPM").tag(bpm)
+                }
+            }
 
-            Button(action: {
-                fetchHeartRate()
-            }) {
-                Text("Check Heart Rate")
-                    .font(.headline)
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
+            Toggle(isOn: $monitoringEnabled) {
+                Text("Start Monitoring")
             }
         }
         .onAppear {
-            requestAuthorization()
+            // Load saved values from UserDefaults
+            heartRateLimit = UserDefaults.standard.integer(forKey: "HeartRateLimit")
+            monitoringEnabled = UserDefaults.standard.bool(forKey: "MonitoringEnabled")
+        }
+        .onChange(of: heartRateLimit) { newValue in
+            // Save to UserDefaults
+            UserDefaults.standard.set(newValue, forKey: "HeartRateLimit")
+        }
+        .onChange(of: monitoringEnabled) { newValue in
+            // Save to UserDefaults
+            UserDefaults.standard.set(newValue, forKey: "MonitoringEnabled")
         }
     }
 
-    private func requestAuthorization() {
-        let heartRateQuantity = HKObjectType.quantityType(forIdentifier: .heartRate)!
-        let dataTypes: Set<HKObjectType> = [heartRateQuantity]
-
-        healthStore.requestAuthorization(toShare: [], read: dataTypes) { success, error in
-            if !success {
-                print("Authorization failed")
-            }
-        }
-    }
-
-    private func fetchHeartRate() {
-        let heartRateQuantity = HKObjectType.quantityType(forIdentifier: .heartRate)!
-        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
-        let query = HKSampleQuery(sampleType: heartRateQuantity, predicate: nil, limit: 1, sortDescriptors: [sortDescriptor]) { _, results, error in
-            guard let results = results, !results.isEmpty else {
-                print("Error fetching heart rate data: \(error?.localizedDescription ?? "Unknown error")")
-                return
-            }
-
-            if let heartRateSample = results.first as? HKQuantitySample {
-                DispatchQueue.main.async {
-                    self.heartRate = heartRateSample.quantity.doubleValue(for: HKUnit(from: "count/min"))
-                }
-            }
-        }
-
-        healthStore.execute(query)
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    // Helper computed property to read contentOffset binding
+    private var scrollViewOffset: CGFloat {
+        return 0 // Replace with the appropriate value or calculation
     }
 }

@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A231684A2A3DBD4D0016D400 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23168492A3DBD4D0016D400 /* ExtensionDelegate.swift */; };
+		A231684C2A3DBEE20016D400 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A231684B2A3DBEE20016D400 /* InterfaceController.swift */; };
+		A23168502A3DC0560016D400 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A231684F2A3DC0560016D400 /* ContentView.swift */; };
 		A2F24B372A347A4400AC7F8A /* Night Pulse Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A2F24B362A347A4400AC7F8A /* Night Pulse Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A2F24B3C2A347A4400AC7F8A /* Night_PulseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F24B3B2A347A4400AC7F8A /* Night_PulseApp.swift */; };
-		A2F24B3E2A347A4400AC7F8A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F24B3D2A347A4400AC7F8A /* ContentView.swift */; };
 		A2F24B402A347A4500AC7F8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2F24B3F2A347A4500AC7F8A /* Assets.xcassets */; };
 		A2F24B432A347A4500AC7F8A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2F24B422A347A4500AC7F8A /* Preview Assets.xcassets */; };
 		A2F24B4F2A347DD000AC7F8A /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2F24B4E2A347DD000AC7F8A /* HealthKit.framework */; };
@@ -40,10 +42,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A23168492A3DBD4D0016D400 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		A231684B2A3DBEE20016D400 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		A231684F2A3DC0560016D400 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A2F24B302A347A4400AC7F8A /* Night Pulse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Night Pulse.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2F24B362A347A4400AC7F8A /* Night Pulse Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Night Pulse Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2F24B3B2A347A4400AC7F8A /* Night_PulseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Night_PulseApp.swift; sourceTree = "<group>"; };
-		A2F24B3D2A347A4400AC7F8A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A2F24B3F2A347A4500AC7F8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2F24B422A347A4500AC7F8A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A2F24B4E2A347DD000AC7F8A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS9.4.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -87,7 +91,9 @@
 				A2F24B512A347EE400AC7F8A /* Night Pulse Watch App.entitlements */,
 				A2F24B502A347E9D00AC7F8A /* Night-Pulse-Watch-App-Info.plist */,
 				A2F24B3B2A347A4400AC7F8A /* Night_PulseApp.swift */,
-				A2F24B3D2A347A4400AC7F8A /* ContentView.swift */,
+				A231684F2A3DC0560016D400 /* ContentView.swift */,
+				A231684B2A3DBEE20016D400 /* InterfaceController.swift */,
+				A23168492A3DBD4D0016D400 /* ExtensionDelegate.swift */,
 				A2F24B3F2A347A4500AC7F8A /* Assets.xcassets */,
 				A2F24B412A347A4500AC7F8A /* Preview Content */,
 			);
@@ -155,7 +161,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					A2F24B2F2A347A4400AC7F8A = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -208,8 +214,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2F24B3E2A347A4400AC7F8A /* ContentView.swift in Sources */,
+				A231684C2A3DBEE20016D400 /* InterfaceController.swift in Sources */,
+				A23168502A3DC0560016D400 /* ContentView.swift in Sources */,
 				A2F24B3C2A347A4400AC7F8A /* Night_PulseApp.swift in Sources */,
+				A231684A2A3DBD4D0016D400 /* ExtensionDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,9 +265,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -315,9 +325,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
