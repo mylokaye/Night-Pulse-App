@@ -15,6 +15,10 @@ Write an Watch app that is called Night Pulse, which:
 
 Show the users current heart rate on the app and updates if the heart rate changes.
 
+Use Apple’s heart rate data to send a haptic vibration if the heart rate rises above the heart rate limit.
+Include the logic for reading the heart rate and sending haptic feedback.
+
+
 I will test this code on a Real Apple Watch, so please write code that is production ready.
 
 Ensure you comment on your code to explain which files to put the code.
